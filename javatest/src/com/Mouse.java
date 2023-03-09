@@ -1,3 +1,7 @@
+package com;
+
+import com.animal.Animal;
+
 public class Mouse extends Animal {
     public Mouse (String name,int id){
         super(name,id);

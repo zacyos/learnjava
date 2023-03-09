@@ -1,25 +1,24 @@
-enum Color {
-    RED, BlUE, GREEN
-}
+enum Color
+{
+    RED, GREEN, BLUE;
 
-enum Color2 {
-    RED, BlUE, GREEN
-}
+    // 构造函数
+    private Color()
+    {
+        System.out.println("Constructor called for : " + this.toString());
+    }
 
+    public void colorInfo()
+    {
+        System.out.println("Universal Color");
+    }
+}
 
 public class Enum {
 
     public static void main(String[] args) {
-
-
-        Color c1 = Color.BlUE;
-        Color2 c2 = Color2.BlUE;
-
-        switch (c2) {
-            case RED -> System.out.println("RED");
-            case BlUE -> System.out.println("BLUE");
-            case GREEN -> System.out.println("GREEN");
-            default -> System.out.println("default");
-        }
+        Color c1 = Color.GREEN;
+//        System.out.println(c1);
+//        c1.colorInfo();
     }
 }
