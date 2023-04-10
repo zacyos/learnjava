@@ -40,10 +40,10 @@ public class YcBitset {
             if ((i % 2) == 0) bits1.set(i);
             if ((i % 5) != 0) bits2.set(i);
         }
-        System.out.println("Initial pattern in bits1: ");
-        for (int i = 0; i < 16; i++) System.out.print(bits1.get(i) + " ");
-        System.out.println("\nInitial pattern in bits2: ");
-        for (int i = 0; i < 16; i++) System.out.print(bits2.get(i) + " ");
+        System.out.println("Initial pattern in bits1 and bits2: ");
+        for (int i = 0; i < 16; i++) System.out.print(bits1.get(i) + "\t");
+        System.out.println("\n");
+        for (int i = 0; i < 16; i++) System.out.print(bits2.get(i) + "\t");
 
         // AND bits
         bits2.and(bits1);
