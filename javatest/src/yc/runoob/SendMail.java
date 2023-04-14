@@ -26,7 +26,7 @@ public class SendMail {
         // 获取默认session对象
         Session session = Session.getDefaultInstance(properties);
 
-        try{
+        try {
             // 创建默认的 MimeMessage 对象
             MimeMessage message = new MimeMessage(session);
 
@@ -46,7 +46,7 @@ public class SendMail {
             // 发送消息
             Transport.send(message);
             System.out.println("Sent message successfully....");
-        }catch (MessagingException mex) {
+        } catch (MessagingException mex) {
             mex.printStackTrace();
         }
     }

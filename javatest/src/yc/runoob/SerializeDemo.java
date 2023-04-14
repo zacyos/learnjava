@@ -13,8 +13,7 @@ public class SerializeDemo {
         e.setSSN(123456);
         e.setPhone("1234567890");
 
-        try
-        {
+        try {
             FileOutputStream fileOut =
                     new FileOutputStream("/tmp/employee.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -22,8 +21,7 @@ public class SerializeDemo {
             out.close();
             fileOut.close();
             System.out.printf("Serialized data is saved in /tmp/employee.ser");
-        }catch(IOException i)
-        {
+        } catch (IOException i) {
             i.printStackTrace();
         }
 
