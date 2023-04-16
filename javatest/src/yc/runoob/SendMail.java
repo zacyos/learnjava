@@ -37,14 +37,13 @@ public class SendMail
         properties.put("mail.smtp.ssl.enable", "true");
         properties.put("mail.smtp.ssl.socketFactory", sf);
         // 获取默认session对象
-        Session session = Session.getDefaultInstance(properties,new Authenticator(){
-            public PasswordAuthentication getPasswordAuthentication()
-            {
+        Session session = Session.getDefaultInstance(properties, new Authenticator() {
+            public PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication("1099312164@qq.com", "ikorpgjwqfhsjdib"); //发件人邮件用户名、密码
             }
         });
 
-        try{
+        try {
             // 创建默认的 MimeMessage 对象
             MimeMessage message = new MimeMessage(session);
 
@@ -64,7 +63,6 @@ public class SendMail
             Transport.send(message);
             System.out.println("Sent message successfully....from runoob.com");
         }catch (MessagingException mex) {
-            mex.printStackTrace();
         }
     }
 }
