@@ -22,22 +22,27 @@ public class Solution {
         return dayindex + day;
     }
 
+    public static int Calculate_date(String date) {
+        String[] temp = date.split("-");
+        int mon = Integer.parseInt(temp[0]);
+        int day = Integer.parseInt(temp[1]);
+
+        int dayIndex = 0;
+        for (int i = 0; i < mon - 1; i++) {
+            dayIndex = dayIndex + time_days[i];
+        }
+        return dayIndex + day;
+    }
+
     public static int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
-        int[] dt = Solution.split(arriveAlice);
-        int arriveAliceIndex = Solution.calculate(dt[0], dt[1]);
-        dt = Solution.split(leaveAlice);
-        int leaveAliceIndex = Solution.calculate(dt[0], dt[1]);
-        dt = Solution.split(arriveBob);
-        int arriveBobIndex = Solution.calculate(dt[0], dt[1]);
-        dt = Solution.split(leaveBob);
-        int leaveBobIndex = Solution.calculate(dt[0], dt[1]);
-
+        int arriveAliceIndex = Solution.Calculate_date(arriveAlice);
+        int leaveAliceIndex = Solution.Calculate_date(leaveAlice);
+        int arriveBobIndex = Solution.Calculate_date(arriveBob);
+        int leaveBobIndex = Solution.Calculate_date(leaveBob);
         int sameday = 0;
-
-        for(int i = arriveAliceIndex;i<=leaveAliceIndex; i++){
-            if(i<=leaveBobIndex&&i>=arriveBobIndex){
+        for (int i = arriveAliceIndex; i <= leaveAliceIndex; i++) {
+            if (i <= leaveBobIndex && i >= arriveBobIndex) {
                 sameday++;
-
             }
         }
         return sameday;
