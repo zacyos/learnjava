@@ -9,7 +9,7 @@ public class Twosum {
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length; j++) {
                 int targetIndex = nums[i] + nums[j];
-                if (targetIndex == target) {
+                if (targetIndex == target && i != j) {
                     result[0] = i;
                     result[1] = j;
                     return result;
