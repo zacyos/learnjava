@@ -18,4 +18,19 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    public void print() {
+        System.out.print(val);
+        ListNode temp = next;
+        while (temp != null) {
+
+
+            System.out.print(" " + temp.val);
+            temp = temp.next;
+
+        }
+        System.out.println();
+    }
+
+
 }
