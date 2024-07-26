@@ -6,17 +6,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Group ID, Artifact ID, and Version define the project coordinates -->
-    <groupId>yc.openai</groupId>
+    <groupId>yc.ner</groupId>
     <artifactId>javatest</artifactId>
     <version>1.0.0</version>
-
+    <properties>
+        <java.version>18</java.version>
+    </properties>
     <!-- Dependencies can be added here -->
     <dependencies>
         <!-- New dependency -->
         <dependency>
-            <groupId>com.openai</groupId>
-            <artifactId>openai-java</artifactId>
-            <version>1.0.0</version>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>4.4.0</version>
         </dependency>
     </dependencies>
 
