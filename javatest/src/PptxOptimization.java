@@ -1,3 +1,4 @@
+//
 //import com.openai.api.ApiException;
 //import com.openai.api.models.CompletionRequest;
 //import com.openai.api.models.CompletionResponse;
@@ -6,7 +7,6 @@
 //import org.apache.poi.xslf.usermodel.XMLSlideShow;
 //import org.apache.poi.xslf.usermodel.XSLFShape;
 //import org.apache.poi.xslf.usermodel.XSLFSlide;
-//
 //import java.io.FileInputStream;
 //import java.io.FileOutputStream;
 //import java.io.IOException;
@@ -17,10 +17,10 @@
 //    public static void main(String[] args) {
 //
 //        // OpenAI API密钥
-//        String apiKey = "YOUR_API_KEY_HERE";
+//        String apiKey = "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";
 //
 //        // PowerPoint演示文稿文件路径
-//        String pptFile = "path/to/your/pptx/file.pptx";
+//        String pptFile = "/Users/zzy/Desktop/工作/1.产品部/3.Greagent/2.外部团队/赵震宇2539/产品线介绍和培训/通用";
 //
 //        try {
 //            // 获取演示文稿文本内容
@@ -58,7 +58,7 @@
 //            }
 //
 //            // 保存优化后的演示文稿
-//            FileOutputStream fos = new FileOutputStream("path/to/your/new/pptx/file.pptx");
+//            FileOutputStream fos = new FileOutputStream("ppt.pptx");
 //            ppt.write(fos);
 //            fos.close();
 //            ppt.close();
